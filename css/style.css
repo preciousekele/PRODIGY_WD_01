@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root {
+    --primary: blue;
+    --light: #fff;
+}
+
+/****************
+#Custom CSS
+******************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    display: block;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* header CSS */
+header {
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+}
+
+header .nav-item .nav-link {
+    font-size: 14px;
+    color: var(--light);
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.scroll {
+    background-attachment: fixed;
+}
+
+.navbar-toggler {
+    outline: none !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: none !important;
+    border-radius: none !important;
+}
+
+.nav-item {
+    margin-left: -17px;
+}
+
+@media(max-width:768px) {
+    header .nav-item .nav-link {
+        font-size: 9px;
+    }
+
+    header .navbar-toggler {
+        font-size: 15px;
+    }
+
+    header {
+        position: fixed;
+    }
+}
+
+/* hero section*/
+.hero {
+    width: 100%;
+}
+
+.hero .carousel-item img {
+    height: 668px;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero .carousel-item::before {
+    content: '';
+    background-color: rgb(37, 37, 90);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.hero .carousel-content-container {
+    text-align: center;
+    color: var(--light);
+}
+
+.hero .carousel-content-container h2 span {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+}
+
+@media(max-width:768px) {
+    /* .hero .carousel-content-container{
+    } */
+}
+
+.colored-text {
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(125, 166, 212);
+    color: white;
+}
+
+.hero .carousel-content-container p {
+    font-size: 20px;
+    margin: 0 auto;
+    color: goldenrod;
+}
+
+.hero .carousel-content-container h2 span p {
+    margin-top: 5px;
+}
+
+.buttons .button1 {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 12px 30px;
+    line-height: 0.8;
+    margin: 10px 10px;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 45px;
+}
+
+.buttons .button1:hover {
+    background-color: rgb(9, 8, 85);
+}
+
+@media(max-width:768px) {
+    .hero .carousel-content-container h2 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .hero .carousel-content-container h2 span {
+        font-size: 35px;
+    }
+
+    .hero .carousel-content-container p {
+        margin-top: -8px;
+        font-size: 12px;
+    }
+
+    .buttons .button1 {
+        font-size: 13px;
+        padding: 9px 30px;
+    }
+
+    nav {
+        background-color: var(--light);
+    }
+
+    nav {
+        color: #585858;
+    }
+
+    .hero .carousel-item img {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+/* feature section start */
+.feature .main-feature-box {
+    margin-bottom: 30px;
+    background-color: var(--light);
+    box-shadow: 0 10px 55px 5px rgba(58, 45, 245, 0.2);
+    position: relative;
+    padding: 25px 20px;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.feature .main-feature-box .icon {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    background-color: var(--primary);
+    color: var(--light);
+    transition: .5s;
+    font-size: 25px;
+}
+
+.feature .main-feature-box h3 {
+    font-size: 19px;
+    font-weight: 600;
+    padding-bottom: 7px;
+    position: relative;
+    font-family: "Playfair Display", serif;
+}
+
+.feature .main-feature-box p {
+    font-size: 14px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.feature .main-feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.other {
+    border: none;
+    background-image: radial-gradient(ellipse, #e3e9eb, #c7dadf, #120b64);
+}
+
+.about {
+    position: relative;
+    display: flex;
+}
+
+.about-content {
+    max-width: 550px;
+}
+
+.about span {
+    display: block;
+    margin-bottom: 5px;
+    color: goldenrod;
+    font-size: 26px;
+}
+
+.about h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.about h3 {
+    transform: rotate(45deg);
+}
+
+.about p {
+    display: flex;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.buttons .button3 {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 10px 30px;
+    line-height: 0.8;
+    margin: 10px 10px;
+    color: var(--light);
+    background-color: rgb(9, 8, 85);
+    border: 1px solid var(--light);
+    border-radius: 45px;
+}
+
+.buttons .button3:hover {
+    background-color: rgb(11, 11, 150);
+}
+
+@media screen and (min-width: 771px) and (max-width: 991px) {}
+
+/* about section end */
+
+/* why choose us section */
+.choose .choose-item {
+    padding: 10px;
+    border: none !important;
+}
+
+.choose .choose-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #120b64;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.choose .choose-item p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.choose .choose-item img {
+    height: ;
+}
+
+.col-md-4 .choose-item {
+    border: none !important;
+    background-image: radial-gradient(ellipse, #e3e9eb, )
+}
+
+/* why choose us section */
+/* footer */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: rgb(9, 8, 85);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.contact-left p {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    color: #535151;
+    transform: translateY(-1px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: rgb(8, 16, 85);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 5;
+    outline: none;
+    background: rgb(215, 233, 241);
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    width: 200px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+input[type="text"] {
+    font-size: 16px;
+}
+
+input[type="email"] {
+    font-size: 16px;
+}
+
+textarea[name="message"] {
+    font-size: 16px;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: white;/
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(54, 8, 54) !important;
+}
+
+form .btn2:hover {
+    color: white;
+    background-color: rgb(11, 11, 150);
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 2px 2px;
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+.copyright p {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero .carousel-content-container h2 {
+        font-size: 15px;
+    }
+
+    .buttons .button1 {
+        font-size: 10px;
+    }
+
+    .about h2 {
+        font-size: 1px;
+    }
+}
